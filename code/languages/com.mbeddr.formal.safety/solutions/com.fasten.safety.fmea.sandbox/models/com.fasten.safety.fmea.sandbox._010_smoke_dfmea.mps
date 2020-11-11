@@ -18,7 +18,14 @@
       <concept id="2557074442922438156" name="de.slisson.mps.richtext.structure.Word" flags="ng" index="19SUe$" />
     </language>
     <language id="b43c548b-f75f-46e2-ad24-de9edd93e95e" name="com.fasten.safety.fmea">
-      <concept id="8413234032527459520" name="com.fasten.safety.fmea.structure.FailureModeBase" flags="ng" index="1PLKG7">
+      <concept id="3491732495478955378" name="com.fasten.safety.fmea.structure.FailureEffectDefinitionBase" flags="ng" index="1jKNP6">
+        <child id="4663111736253957550" name="description" index="2VUvr4" />
+      </concept>
+      <concept id="3491732495478440804" name="com.fasten.safety.fmea.structure.FailureModeDefinitionBase" flags="ng" index="1jQQdg">
+        <child id="4663111736253767864" name="description" index="2VUHfi" />
+      </concept>
+      <concept id="8413234032527459520" name="com.fasten.safety.fmea.structure.FailureModeAndEffects" flags="ng" index="1PLKG7">
+        <reference id="3491732495478507335" name="failureModeDefinition" index="1jQAtN" />
         <child id="8413234032527493605" name="effects" index="1PLCoy" />
       </concept>
       <concept id="8413234032527459451" name="com.fasten.safety.fmea.structure.SubjectBase" flags="ng" index="1PLKIW">
@@ -44,28 +51,21 @@
       </concept>
     </language>
     <language id="1110e3ef-a98e-444f-9748-1d61fe61c7f7" name="com.fasten.safety.fmea.arch">
-      <concept id="4663111736253957542" name="com.fasten.safety.fmea.arch.structure.ComponentFailureEffect" flags="ng" index="2VUvrc">
-        <child id="4663111736253957550" name="description" index="2VUvr4" />
-      </concept>
+      <concept id="4663111736253957542" name="com.fasten.safety.fmea.arch.structure.ComponentFailureEffectDefinition" flags="ng" index="2VUvrc" />
       <concept id="4663111736253957534" name="com.fasten.safety.fmea.arch.structure.ComponentFailureEffectsDefinition" flags="ng" index="2VUvrO">
         <child id="4663111736254003226" name="effects" index="2VUkHK" />
       </concept>
       <concept id="4663111736253767846" name="com.fasten.safety.fmea.arch.structure.ComponentFailureModesDefinition" flags="ng" index="2VUHfc">
         <reference id="4663111736253767852" name="interface" index="2VUHf6" />
-        <child id="4663111736253793712" name="filureModes" index="2VUBrq" />
+        <child id="4663111736253793712" name="failureModes" index="2VUBrq" />
       </concept>
-      <concept id="4663111736253767856" name="com.fasten.safety.fmea.arch.structure.ComponentFailureMode" flags="ng" index="2VUHfq">
-        <child id="4663111736253767864" name="description" index="2VUHfi" />
-      </concept>
+      <concept id="4663111736253767856" name="com.fasten.safety.fmea.arch.structure.ComponentFailureModeDefinition" flags="ng" index="2VUHfq" />
       <concept id="4663111736253860896" name="com.fasten.safety.fmea.arch.structure.DesignFMEAEmptyLine" flags="ng" index="2VURXa" />
       <concept id="8413234032527476648" name="com.fasten.safety.fmea.arch.structure.ComponentInstanceSubject" flags="ng" index="1PLGxJ">
         <reference id="8413234032527476717" name="comp" index="1PLGwE" />
       </concept>
       <concept id="8413234032527468119" name="com.fasten.safety.fmea.arch.structure.DesignFMEA" flags="ng" index="1PLMAg">
         <reference id="8413234032528111728" name="arch" index="1POnuR" />
-      </concept>
-      <concept id="8413234032528056374" name="com.fasten.safety.fmea.arch.structure.ComponentFailureModeRef" flags="ng" index="1PNyZL">
-        <reference id="4663111736253809285" name="failureMode" index="2VUV7J" />
       </concept>
       <concept id="8413234032528056373" name="com.fasten.safety.fmea.arch.structure.ComponentEffect" flags="ng" index="1PNyZM">
         <reference id="4663111736254126539" name="effect" index="2VPQEx" />
@@ -116,24 +116,30 @@
     <node concept="2VUvrO" id="42QGQFVotAs" role="1POhhj">
       <node concept="2VUvrc" id="42QGQFVotAu" role="2VUkHK">
         <property role="TrG5h" value="message loss" />
-        <node concept="19SGf9" id="42QGQFVotAw" role="2VUvr4">
-          <node concept="19SUe$" id="42QGQFVotAx" role="19SJt6" />
+        <node concept="19SGf9" id="GA19r16ebF" role="2VUvr4">
+          <node concept="19SUe$" id="GA19r16ebG" role="19SJt6" />
+        </node>
+      </node>
+      <node concept="2VUvrc" id="31P83hzGOo0" role="2VUkHK">
+        <property role="TrG5h" value="message altered" />
+        <node concept="19SGf9" id="GA19r16ebN" role="2VUvr4">
+          <node concept="19SUe$" id="GA19r16ebO" role="19SJt6" />
         </node>
       </node>
     </node>
     <node concept="2VURXa" id="42QGQFVotAP" role="1POhhj" />
     <node concept="2VUHfc" id="42QGQFVnOkZ" role="1POhhj">
       <ref role="2VUHf6" node="42QGQFVn3Dm" resolve="Receiver" />
-      <node concept="2VUHfq" id="42QGQFVnOl1" role="2VUBrq">
+      <node concept="2VUHfq" id="GA19r0MZIZ" role="2VUBrq">
         <property role="TrG5h" value="blocked" />
-        <node concept="19SGf9" id="42QGQFVnOl3" role="2VUHfi">
-          <node concept="19SUe$" id="42QGQFVnOl4" role="19SJt6" />
+        <node concept="19SGf9" id="GA19r16ebr" role="2VUHfi">
+          <node concept="19SUe$" id="GA19r16ebs" role="19SJt6" />
         </node>
       </node>
-      <node concept="2VUHfq" id="42QGQFVnOlA" role="2VUBrq">
+      <node concept="2VUHfq" id="GA19r0MZKL" role="2VUBrq">
         <property role="TrG5h" value="too slow" />
-        <node concept="19SGf9" id="42QGQFVnOlB" role="2VUHfi">
-          <node concept="19SUe$" id="42QGQFVnOlC" role="19SJt6" />
+        <node concept="19SGf9" id="GA19r16ebv" role="2VUHfi">
+          <node concept="19SUe$" id="GA19r16ebw" role="19SJt6" />
         </node>
       </node>
     </node>
@@ -143,15 +149,15 @@
       <ref role="1POnuR" node="42QGQFVn3Fg" resolve="SenderReceiverSystem" />
       <node concept="1PLGxJ" id="42QGQFVn3I8" role="1PLElB">
         <ref role="1PLGwE" node="42QGQFVn3FY" resolve="r" />
-        <node concept="1PNyZL" id="42QGQFVnOl$" role="1PLCo$">
-          <ref role="2VUV7J" node="42QGQFVnOl1" resolve="blocked" />
-          <node concept="1PNyZM" id="42QGQFVp2pR" role="1PLCoy">
+        <node concept="1PLKG7" id="31P83hzGOnQ" role="1PLCo$">
+          <ref role="1jQAtN" node="GA19r0MZIZ" resolve="blocked" />
+          <node concept="1PNyZM" id="31P83hzGOnY" role="1PLCoy">
             <ref role="2VPQEx" node="42QGQFVotAu" resolve="message loss" />
           </node>
         </node>
-        <node concept="1PNyZL" id="42QGQFVnOlM" role="1PLCo$">
-          <ref role="2VUV7J" node="42QGQFVnOlA" resolve="too slow" />
-          <node concept="1PNyZM" id="42QGQFVp2pU" role="1PLCoy">
+        <node concept="1PLKG7" id="31P83hzGMP3" role="1PLCo$">
+          <ref role="1jQAtN" node="GA19r0MZKL" resolve="too slow" />
+          <node concept="1PNyZM" id="31P83hzGMP6" role="1PLCoy">
             <ref role="2VPQEx" node="42QGQFVotAu" resolve="message loss" />
           </node>
         </node>

@@ -32,6 +32,8 @@
     </language>
     <language id="5e7ffa70-8e23-49f4-8c13-a887bba14c36" name="com.mbeddr.formal.safety.gsn.external_evidence">
       <concept id="4043927170651692617" name="com.mbeddr.formal.safety.gsn.external_evidence.structure.ExternalEvidenceDocument" flags="ng" index="K87gv">
+        <property id="3284458703653091389" name="savedHashCode" index="FewnR" />
+        <property id="5518589349818288912" name="updateDate" index="HIrNm" />
         <child id="4043927170651692618" name="document" index="K87gs" />
       </concept>
       <concept id="7910860657280411360" name="com.mbeddr.formal.safety.gsn.external_evidence.structure.DocumentBasedExternalEvidenceSolution" flags="ng" index="3t1IcU">
@@ -89,10 +91,10 @@
       <node concept="37mRIm" id="3wuU_o8g42p" role="37mRID">
         <property role="37mO49" value="4043927170651799656" />
         <node concept="gqqVs" id="3wuU_o8g42o" role="37mO4d">
-          <property role="gqqTZ" value="45.0" />
-          <property role="gqqTW" value="15.0" />
-          <property role="gqqTX" value="160.0" />
-          <property role="gqqTy" value="72.0" />
+          <property role="gqqTZ" value="57.0" />
+          <property role="gqqTW" value="24.0" />
+          <property role="gqqTX" value="180.0" />
+          <property role="gqqTy" value="52.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -109,15 +111,16 @@
     </node>
     <node concept="3t1IcU" id="3wuU_o8g41C" role="2vn1q5">
       <property role="TrG5h" value="Sn01" />
-      <node concept="K87gv" id="3wuU_o8g43O" role="3t1IcV">
-        <node concept="3NXOOs" id="3wuU_o8g44w" role="K87gs">
-          <property role="1RwFax" value="true" />
-          <property role="3N1Lgt" value="external_evidence/D4.2.1_system_testing_report.pdf" />
-        </node>
-      </node>
       <node concept="19SGf9" id="3wuU_o8gxhi" role="2vnaTY">
         <node concept="19SUe$" id="3wuU_o8gxhj" role="19SJt6">
           <property role="19SUeA" value="Test Results" />
+        </node>
+      </node>
+      <node concept="K87gv" id="6J2m9UdFTbY" role="3t1IcV">
+        <property role="FewnR" value="Hg2hgVWEuwOSvXQy/yMlmA==" />
+        <property role="HIrNm" value="11/08/2020 19:46:31" />
+        <node concept="3NXOOs" id="6J2m9UdFTc8" role="K87gs">
+          <property role="3N1Lgt" value="external_evidence/D4.2.1_system_testing_report.pdf" />
         </node>
       </node>
     </node>
