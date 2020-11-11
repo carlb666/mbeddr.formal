@@ -46,8 +46,14 @@
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <child id="5169995583184591170" name="smodelAttribute" index="lGtFl" />
+      </concept>
       <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
         <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+      <concept id="779128492853369165" name="jetbrains.mps.lang.core.structure.SideTransformInfo" flags="ng" index="1KehLL">
+        <property id="779128492853934523" name="cellId" index="1K8rM7" />
       </concept>
     </language>
   </registry>
@@ -69,6 +75,9 @@
       <property role="20lmBu" value="fLJjDmT/aggregation" />
       <property role="20kJfa" value="category" />
       <ref role="20lvS9" to="tpck:BpxLfMhSxq" resolve="ChildAttribute" />
+      <node concept="1KehLL" id="6lt1i8pWdgu" role="lGtFl">
+        <property role="1K8rM7" value="Constant_6h6dhy_e2a" />
+      </node>
     </node>
     <node concept="1TJgyj" id="6lt1i8pWcTQ" role="1TKVEi">
       <property role="IQ2ns" value="7303999814687051382" />
