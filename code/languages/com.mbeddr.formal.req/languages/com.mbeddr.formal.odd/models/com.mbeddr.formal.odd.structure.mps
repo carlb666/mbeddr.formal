@@ -3,6 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="9" />
+    <use id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel" version="17" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
@@ -11,6 +12,17 @@
   </imports>
   <registry>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
+      <concept id="3348158742936976480" name="jetbrains.mps.lang.structure.structure.EnumerationMemberDeclaration" flags="ng" index="25R33">
+        <property id="1421157252384165432" name="memberId" index="3tVfz5" />
+        <property id="672037151186491528" name="presentation" index="1L1pqM" />
+      </concept>
+      <concept id="3348158742936976479" name="jetbrains.mps.lang.structure.structure.EnumerationDeclaration" flags="ng" index="25R3W">
+        <reference id="1075010451642646892" name="defaultMember" index="1H5jkz" />
+        <child id="3348158742936976577" name="members" index="25R1y" />
+      </concept>
+      <concept id="1082978164218" name="jetbrains.mps.lang.structure.structure.DataTypeDeclaration" flags="ng" index="AxPO6">
+        <property id="7791109065626895363" name="datatypeId" index="3F6X1D" />
+      </concept>
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
         <property id="4628067390765907488" name="conceptShortDescription" index="R4oN_" />
@@ -51,6 +63,18 @@
       <property role="20kJfa" value="parameters" />
       <property role="20lbJX" value="fLJekj5/_0__n" />
       <ref role="20lvS9" node="3MS6PFo$3Xh" resolve="ODDParameter" />
+    </node>
+    <node concept="1TJgyj" id="6lt1i8pW8oM" role="1TKVEi">
+      <property role="IQ2ns" value="7303999814687032882" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="category" />
+      <ref role="20lvS9" to="tpck:BpxLfMhSxq" resolve="ChildAttribute" />
+    </node>
+    <node concept="1TJgyj" id="6lt1i8pWcTQ" role="1TKVEi">
+      <property role="IQ2ns" value="7303999814687051382" />
+      <property role="20lmBu" value="fLJjDmT/aggregation" />
+      <property role="20kJfa" value="description" />
+      <ref role="20lvS9" to="87nw:2dWzqxEB$Tx" resolve="Text" />
     </node>
     <node concept="PrWs8" id="3MS6PFozGnM" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
@@ -98,6 +122,51 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="7YA8HUg2dsA" role="PzmwI">
       <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="25R3W" id="6lt1i8pW8oP">
+    <property role="3F6X1D" value="7303999814687032885" />
+    <property role="TrG5h" value="ODDCategories" />
+    <ref role="1H5jkz" node="6lt1i8pW8oQ" resolve="Dynamic_elements" />
+    <node concept="25R33" id="6lt1i8pW8oQ" role="25R1y">
+      <property role="3tVfz5" value="7303999814687032886" />
+      <property role="TrG5h" value="Dynamic_elements" />
+      <property role="1L1pqM" value="Dynamic" />
+    </node>
+    <node concept="25R33" id="6lt1i8pW8oR" role="25R1y">
+      <property role="3tVfz5" value="7303999814687032887" />
+      <property role="TrG5h" value="Scenery" />
+      <property role="1L1pqM" value="Scenery" />
+    </node>
+    <node concept="25R33" id="6lt1i8pW8oU" role="25R1y">
+      <property role="3tVfz5" value="7303999814687032890" />
+      <property role="TrG5h" value="Connectivity" />
+      <property role="1L1pqM" value="Connectivity" />
+    </node>
+    <node concept="25R33" id="6lt1i8pW8oY" role="25R1y">
+      <property role="3tVfz5" value="7303999814687032894" />
+      <property role="TrG5h" value="Actions_Events_other_Actors" />
+      <property role="1L1pqM" value="Actions" />
+    </node>
+    <node concept="25R33" id="6lt1i8pW8p3" role="25R1y">
+      <property role="3tVfz5" value="7303999814687032899" />
+      <property role="TrG5h" value="GnV_Permenent" />
+      <property role="1L1pqM" value="GnVP" />
+    </node>
+    <node concept="25R33" id="6lt1i8pW8p9" role="25R1y">
+      <property role="3tVfz5" value="7303999814687032905" />
+      <property role="TrG5h" value="GnV_Transient" />
+      <property role="1L1pqM" value="GnVT" />
+    </node>
+    <node concept="25R33" id="6lt1i8pW8pg" role="25R1y">
+      <property role="3tVfz5" value="7303999814687032912" />
+      <property role="TrG5h" value="Functional_range" />
+      <property role="1L1pqM" value="FR" />
+    </node>
+    <node concept="25R33" id="6lt1i8pW8po" role="25R1y">
+      <property role="3tVfz5" value="7303999814687032920" />
+      <property role="TrG5h" value="Fallback_ready_user" />
+      <property role="1L1pqM" value="FBU" />
     </node>
   </node>
 </model>
